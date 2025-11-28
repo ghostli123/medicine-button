@@ -1,0 +1,555 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		DE12DBFF2ED9887500CB1B5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE12DBE92ED9887400CB1B5C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE12DBF02ED9887400CB1B5C;
+			remoteInfo = TakingMedicine;
+		};
+		DE12DC092ED9887500CB1B5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE12DBE92ED9887400CB1B5C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE12DBF02ED9887400CB1B5C;
+			remoteInfo = TakingMedicine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE12DBF12ED9887400CB1B5C /* TakingMedicine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakingMedicine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE12DBFE2ED9887500CB1B5C /* TakingMedicineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakingMedicineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE12DC082ED9887500CB1B5C /* TakingMedicineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakingMedicineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DE12DBF32ED9887400CB1B5C /* TakingMedicine */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TakingMedicine;
+			sourceTree = "<group>";
+		};
+		DE12DC012ED9887500CB1B5C /* TakingMedicineTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TakingMedicineTests;
+			sourceTree = "<group>";
+		};
+		DE12DC0B2ED9887500CB1B5C /* TakingMedicineUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TakingMedicineUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE12DBEE2ED9887400CB1B5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE12DBFB2ED9887500CB1B5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE12DC052ED9887500CB1B5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE12DBE82ED9887400CB1B5C = {
+			isa = PBXGroup;
+			children = (
+				DE12DBF32ED9887400CB1B5C /* TakingMedicine */,
+				DE12DC012ED9887500CB1B5C /* TakingMedicineTests */,
+				DE12DC0B2ED9887500CB1B5C /* TakingMedicineUITests */,
+				DE12DBF22ED9887400CB1B5C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE12DBF22ED9887400CB1B5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE12DBF12ED9887400CB1B5C /* TakingMedicine.app */,
+				DE12DBFE2ED9887500CB1B5C /* TakingMedicineTests.xctest */,
+				DE12DC082ED9887500CB1B5C /* TakingMedicineUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE12DBF02ED9887400CB1B5C /* TakingMedicine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE12DC122ED9887500CB1B5C /* Build configuration list for PBXNativeTarget "TakingMedicine" */;
+			buildPhases = (
+				DE12DBED2ED9887400CB1B5C /* Sources */,
+				DE12DBEE2ED9887400CB1B5C /* Frameworks */,
+				DE12DBEF2ED9887400CB1B5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DE12DBF32ED9887400CB1B5C /* TakingMedicine */,
+			);
+			name = TakingMedicine;
+			packageProductDependencies = (
+			);
+			productName = TakingMedicine;
+			productReference = DE12DBF12ED9887400CB1B5C /* TakingMedicine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE12DBFD2ED9887500CB1B5C /* TakingMedicineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE12DC152ED9887500CB1B5C /* Build configuration list for PBXNativeTarget "TakingMedicineTests" */;
+			buildPhases = (
+				DE12DBFA2ED9887500CB1B5C /* Sources */,
+				DE12DBFB2ED9887500CB1B5C /* Frameworks */,
+				DE12DBFC2ED9887500CB1B5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE12DC002ED9887500CB1B5C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DE12DC012ED9887500CB1B5C /* TakingMedicineTests */,
+			);
+			name = TakingMedicineTests;
+			packageProductDependencies = (
+			);
+			productName = TakingMedicineTests;
+			productReference = DE12DBFE2ED9887500CB1B5C /* TakingMedicineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DE12DC072ED9887500CB1B5C /* TakingMedicineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE12DC182ED9887500CB1B5C /* Build configuration list for PBXNativeTarget "TakingMedicineUITests" */;
+			buildPhases = (
+				DE12DC042ED9887500CB1B5C /* Sources */,
+				DE12DC052ED9887500CB1B5C /* Frameworks */,
+				DE12DC062ED9887500CB1B5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE12DC0A2ED9887500CB1B5C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				DE12DC0B2ED9887500CB1B5C /* TakingMedicineUITests */,
+			);
+			name = TakingMedicineUITests;
+			packageProductDependencies = (
+			);
+			productName = TakingMedicineUITests;
+			productReference = DE12DC082ED9887500CB1B5C /* TakingMedicineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE12DBE92ED9887400CB1B5C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					DE12DBF02ED9887400CB1B5C = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					DE12DBFD2ED9887500CB1B5C = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = DE12DBF02ED9887400CB1B5C;
+					};
+					DE12DC072ED9887500CB1B5C = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = DE12DBF02ED9887400CB1B5C;
+					};
+				};
+			};
+			buildConfigurationList = DE12DBEC2ED9887400CB1B5C /* Build configuration list for PBXProject "TakingMedicine" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE12DBE82ED9887400CB1B5C;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DE12DBF22ED9887400CB1B5C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE12DBF02ED9887400CB1B5C /* TakingMedicine */,
+				DE12DBFD2ED9887500CB1B5C /* TakingMedicineTests */,
+				DE12DC072ED9887500CB1B5C /* TakingMedicineUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE12DBEF2ED9887400CB1B5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE12DBFC2ED9887500CB1B5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE12DC062ED9887500CB1B5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE12DBED2ED9887400CB1B5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE12DBFA2ED9887500CB1B5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE12DC042ED9887500CB1B5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE12DC002ED9887500CB1B5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE12DBF02ED9887400CB1B5C /* TakingMedicine */;
+			targetProxy = DE12DBFF2ED9887500CB1B5C /* PBXContainerItemProxy */;
+		};
+		DE12DC0A2ED9887500CB1B5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE12DBF02ED9887400CB1B5C /* TakingMedicine */;
+			targetProxy = DE12DC092ED9887500CB1B5C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DE12DC102ED9887500CB1B5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DE12DC112ED9887500CB1B5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE12DC132ED9887500CB1B5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Kappaw.TakingMedicine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE12DC142ED9887500CB1B5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Kappaw.TakingMedicine;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DE12DC162ED9887500CB1B5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Kappaw.TakingMedicineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TakingMedicine.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TakingMedicine";
+			};
+			name = Debug;
+		};
+		DE12DC172ED9887500CB1B5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Kappaw.TakingMedicineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TakingMedicine.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TakingMedicine";
+			};
+			name = Release;
+		};
+		DE12DC192ED9887500CB1B5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Kappaw.TakingMedicineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TakingMedicine;
+			};
+			name = Debug;
+		};
+		DE12DC1A2ED9887500CB1B5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Kappaw.TakingMedicineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TakingMedicine;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE12DBEC2ED9887400CB1B5C /* Build configuration list for PBXProject "TakingMedicine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE12DC102ED9887500CB1B5C /* Debug */,
+				DE12DC112ED9887500CB1B5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE12DC122ED9887500CB1B5C /* Build configuration list for PBXNativeTarget "TakingMedicine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE12DC132ED9887500CB1B5C /* Debug */,
+				DE12DC142ED9887500CB1B5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE12DC152ED9887500CB1B5C /* Build configuration list for PBXNativeTarget "TakingMedicineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE12DC162ED9887500CB1B5C /* Debug */,
+				DE12DC172ED9887500CB1B5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE12DC182ED9887500CB1B5C /* Build configuration list for PBXNativeTarget "TakingMedicineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE12DC192ED9887500CB1B5C /* Debug */,
+				DE12DC1A2ED9887500CB1B5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE12DBE92ED9887400CB1B5C /* Project object */;
+}
