@@ -3,9 +3,8 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var tracker: DailyDoseTracker
     @State private var now: Date = Date()
+    @State private var timer: Timer?
     @Environment(\.scenePhase) private var scenePhase
-
-    private let clock = Timer.publish(every: 60, on: .main, in: .common).autoconnect()
 
     var body: some View {
         VStack(spacing: 24) {
@@ -47,14 +46,33 @@ struct ContentView: View {
         }
         .padding()
         .background(Color(.systemGroupedBackground))
-        .onReceive(clock) { date in
-            now = date
+        .onAppear {
+            startTimer()
         }
-        .onChange(of: scenePhase) { phase in
-            if phase == .active {
+        .onDisappear {
+            stopTimer()
+        }
+        .onChange(of: scenePhase) {
+            if scenePhase == .active {
                 now = Date()
+            } else if scenePhase == .inactive || scenePhase == .background {
+                // Timer will continue, but we update time when coming back
             }
         }
+    }
+    
+    private func startTimer() {
+        stopTimer() // Ensure no duplicate timers
+        let newTimer = Timer(timeInterval: 60.0, repeats: true) { [weak self] _ in
+            self?.now = Date()
+        }
+        RunLoop.main.add(newTimer, forMode: .common)
+        timer = newTimer
+    }
+    
+    private func stopTimer() {
+        timer?.invalidate()
+        timer = nil
     }
 
     private var isButtonEnabled: Bool {
@@ -85,7 +103,8 @@ struct ContentView: View {
         if tracker.hasRecordedDose(on: now) {
             return "Last confirmed \(relativeFormatter.localizedString(for: lastDate, relativeTo: now))."
         } else {
-            return "Last confirmed on \(preciseFormatter.string(from: lastDate))."
+            let dateString = preciseFormatter.string(from: lastDate)
+            return "Last confirmed on \(dateString)."
         }
     }
 
