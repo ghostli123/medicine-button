@@ -1,14 +1,62 @@
 import SwiftUI
+import Combine
 
 struct ContentView: View {
     @ObservedObject var tracker: DailyDoseTracker
     @State private var now: Date = Date()
-    @State private var timer: Timer?
+    @State private var timerCancellable: AnyCancellable?
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
+        TabView {
+            // Main Tracking View
+            mainTrackingView
+                .tabItem {
+                    Label("Track", systemImage: "pill.fill")
+                }
+            
+            // History View
+            HistoryView(tracker: tracker)
+                .tabItem {
+                    Label("History", systemImage: "calendar")
+                }
+        }
+    }
+    
+    private var mainTrackingView: some View {
         VStack(spacing: 24) {
             Spacer()
+
+            // Statistics Card
+            if tracker.totalDoses() > 0 {
+                HStack(spacing: 30) {
+                    VStack {
+                        Text("\(tracker.currentStreak())")
+                            .font(.title)
+                            .bold()
+                            .foregroundStyle(.blue)
+                        Text("Day Streak")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                    Divider()
+                        .frame(height: 40)
+                    VStack {
+                        Text("\(tracker.totalDoses())")
+                            .font(.title)
+                            .bold()
+                            .foregroundStyle(.green)
+                        Text("Total Doses")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+                .padding()
+                .background(Color(.systemBackground))
+                .clipShape(RoundedRectangle(cornerRadius: 16))
+                .shadow(color: .black.opacity(0.1), radius: 5, x: 0, y: 2)
+                .padding(.horizontal, 24)
+            }
 
             VStack(spacing: 8) {
                 Text(statusTitle)
@@ -46,33 +94,31 @@ struct ContentView: View {
         }
         .padding()
         .background(Color(.systemGroupedBackground))
-        .onAppear {
-            startTimer()
-        }
-        .onDisappear {
-            stopTimer()
-        }
-        .onChange(of: scenePhase) {
-            if scenePhase == .active {
-                now = Date()
-            } else if scenePhase == .inactive || scenePhase == .background {
-                // Timer will continue, but we update time when coming back
+            .onAppear {
+                startTimer()
             }
-        }
+            .onDisappear {
+                stopTimer()
+            }
+            .onChange(of: scenePhase) {
+                if scenePhase == .active {
+                    now = Date()
+                }
+            }
     }
     
     private func startTimer() {
-        stopTimer() // Ensure no duplicate timers
-        let newTimer = Timer(timeInterval: 60.0, repeats: true) { [weak self] _ in
-            self?.now = Date()
-        }
-        RunLoop.main.add(newTimer, forMode: .common)
-        timer = newTimer
+        stopTimer()
+        timerCancellable = Timer.publish(every: 60.0, on: .main, in: .common)
+            .autoconnect()
+            .sink { date in
+                now = date
+            }
     }
     
     private func stopTimer() {
-        timer?.invalidate()
-        timer = nil
+        timerCancellable?.cancel()
+        timerCancellable = nil
     }
 
     private var isButtonEnabled: Bool {
