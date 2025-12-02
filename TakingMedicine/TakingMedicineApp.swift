@@ -1,17 +1,13 @@
-//
-//  TakingMedicineApp.swift
-//  TakingMedicine
-//
-//  Created by Yang Zhang on 11/27/25.
-//
-
 import SwiftUI
 
 @main
 struct TakingMedicineApp: App {
+    @StateObject private var tracker = DailyDoseTracker()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(tracker: tracker)
         }
     }
 }
+
