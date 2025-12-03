@@ -3,8 +3,10 @@ import Combine
 
 struct ContentView: View {
     @ObservedObject var tracker: DailyDoseTracker
+    @ObservedObject var reminderManager: ReminderManager
     @State private var now: Date = Date()
     @State private var timerCancellable: AnyCancellable?
+    @State private var showSettings = false
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
@@ -21,10 +23,26 @@ struct ContentView: View {
                     Label("History", systemImage: "calendar")
                 }
         }
+        .sheet(isPresented: $showSettings) {
+            SettingsView(reminderManager: reminderManager)
+        }
     }
     
     private var mainTrackingView: some View {
         VStack(spacing: 24) {
+            // Settings Button
+            HStack {
+                Spacer()
+                Button(action: { showSettings = true }) {
+                    Image(systemName: "gearshape.fill")
+                        .font(.title3)
+                        .foregroundStyle(.secondary)
+                        .padding(8)
+                }
+            }
+            .padding(.horizontal)
+            .padding(.top, 8)
+            
             Spacer()
 
             // Statistics Card
@@ -197,6 +215,6 @@ private let countdownFormatter: DateComponentsFormatter = {
 }()
 
 #Preview("Enabled state") {
-    ContentView(tracker: DailyDoseTracker())
+    ContentView(tracker: DailyDoseTracker(), reminderManager: ReminderManager())
 }
 

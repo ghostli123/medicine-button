@@ -20,15 +20,29 @@ final class DailyDoseTracker: ObservableObject {
             self.doseHistory = historyData.map { Date(timeIntervalSince1970: $0) }
                 .sorted(by: >) // Most recent first
         }
+        
+        // Migration: If we have a lastTakenDate but it's not in history, add it
+        if let lastDate = self.lastTakenDate, !doseHistory.contains(where: { calendar.isDate($0, inSameDayAs: lastDate) }) {
+            doseHistory.insert(lastDate, at: 0)
+            saveHistory()
+        }
     }
     
     /// Records that the medicine was taken at the supplied time.
     func markDoseTaken(at date: Date = Date()) {
+        // Check if we've already recorded a dose today BEFORE updating lastTakenDate
+        let alreadyRecordedToday = hasRecordedDose(on: date)
+        
         lastTakenDate = date
         defaults.set(date, forKey: lastTakenKey)
         
         // Add to history if not already recorded today
-        if !hasRecordedDose(on: date) {
+        if !alreadyRecordedToday {
+            // Remove any existing entry for today (shouldn't happen, but be safe)
+            let todayStart = calendar.startOfDay(for: date)
+            doseHistory.removeAll { calendar.isDate($0, inSameDayAs: todayStart) }
+            
+            // Add new entry
             doseHistory.insert(date, at: 0) // Add to beginning
             saveHistory()
         }
@@ -57,21 +71,30 @@ final class DailyDoseTracker: ObservableObject {
         var streak = 0
         var checkDate = today
         
-        // Check if today is recorded
-        if hasRecordedDose(on: today) {
-            streak = 1
-            checkDate = calendar.date(byAdding: .day, value: -1, to: checkDate) ?? checkDate
+        // Start from today and work backwards
+        // Check if today has a dose
+        let todayHasDose = doseHistory.contains { calendar.isDate($0, inSameDayAs: today) }
+        
+        if !todayHasDose {
+            // If today doesn't have a dose, start from yesterday
+            checkDate = calendar.date(byAdding: .day, value: -1, to: today) ?? today
         }
         
         // Count consecutive days backwards
-        while let previousDay = calendar.date(byAdding: .day, value: -1, to: checkDate) {
-            let dayStart = calendar.startOfDay(for: previousDay)
+        while true {
+            let dayStart = calendar.startOfDay(for: checkDate)
             let hasDose = doseHistory.contains { calendar.isDate($0, inSameDayAs: dayStart) }
             
             if hasDose {
                 streak += 1
-                checkDate = previousDay
+                // Move to previous day
+                if let previousDay = calendar.date(byAdding: .day, value: -1, to: checkDate) {
+                    checkDate = previousDay
+                } else {
+                    break
+                }
             } else {
+                // Found a gap - streak is broken
                 break
             }
         }
